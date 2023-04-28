@@ -6,8 +6,8 @@ html{
 }
 
 body{
-    background: rgb(63,94,251);
-    background: linear-gradient(43deg, rgba(63,94,251,1) 29%, rgba(252,70,107,1) 100%);
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
     margin: 50px;
     min-height: 100vh;
 }
