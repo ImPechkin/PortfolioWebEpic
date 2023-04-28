@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Shantell+Sans:wght@600&display=swap%27');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fredoka One', cursive;
+}
+
+.preloader {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: #353535;
+    overflow: hidden;
+    z-index: 1000000000000;
+    transition: opacity 0.5s 1.3s;
+}
+
+.preloader.preload-finish {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.preloader .outer-space {
+    width: 600px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.preloader .rocket-container {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.preloader.preload-finish .rocket-container {
+    animation: finish 0.5s ease forwards;
+}
+
+@keyframes finish {
+    from {
+        bottom: 50%;
+    }
+
+    to {
+        bottom: 140%;
+    }
+}
+
+.preloader .rocket {
+    height: 320px;
+    animation: move 0.2s linear infinite alternate;
+}
+
+@keyframes move {
+    from {
+        transform: translateX(-5px);
+    }
+
+    to {
+        transform: translateX(5px);
+    }
+}
+
+.title {
+    color: #fff;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 24px;
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translateX(-50%);
+}
+
+#circle {
+    animation: move-circle 0.2s linear infinite alternate;
+}
+
+@keyframes move-circle {
+    from {
+        transform: translateY(-5px);
+    }
+
+    to {
+        transform: translateY(5px);
+    }
+}
+
+@keyframes stars {
+    from {
+        transform: translateY(-1000px);
+    }
+
+    to {
+        transform: translateY(1000px);
+    }
+}
+
+.content {
+    background-color: #34495e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #fff;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+h4 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.image {
+    width: 320px;
+    height: 225px;
+    background: url(https://picsum.photos/500/500);
+    background-size: cover;
+    background-position: center;
+}

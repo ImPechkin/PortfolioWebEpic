@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Shantell+Sans:wght@600&display=swap%27');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fredoka One', cursive;
+}
+
+body {
+     background: url(bg.jpg); 
+     background-size: cover;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+section h2 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    line-height: 100vh;
+    font-size: 10vw;
+    color: #fff;
+    font-weight: 700;
+    z-index: 1;
+}
+
+.banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 500px;
+    transform-style: preserve-3d;
+    z-index: 2;
+}
+
+.banner .blocks {
+    position: relative;
+    display: block;
+    width: 5vw;
+    height: 5vh;
+    border-radius: 5px;
+    animation: animate 2s ease-in-out forwards;
+    z-index: 2;
+}
+
+@keyframes animate {
+    0%{
+        transform: translateZ(2000px);
+        background: url(bg.jpg);
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    100%{
+        transform: translateZ(0px);
+        background: url(bg.jpg);
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+}

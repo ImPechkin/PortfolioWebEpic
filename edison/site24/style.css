@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Shantell+Sans:wght@600&display=swap%27');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fredoka One', cursive;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: #2196f3;
+}
+
+.container .mac {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+}
+
+.container .mac .imgBx {
+    position: absolute;
+    width: 555px;
+    height: 313px;
+    top: 25px;
+    left: 25px;
+    background: red url(assets/desktopWebsite.jpg);
+    background-position: top;
+    background-size: 100%;
+    transition: background-position 5s linear;
+}
+
+.container .mac:hover .imgBx {
+    background-position: bottom;
+}
+
+.container .macbook {
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    z-index: 1;
+}
+
+.container .macbook .imgBx {
+    position: absolute;
+    width: 465px;
+    height: 290px;
+    top: 20px;
+    left: 72px;
+    background: blue url(assets/desktopWebsite.jpg);
+    background-position: top;
+    background-size: 100%;
+    transition: background-position 5s linear;
+}
+
+.container .macbook:hover .imgBx {
+    background-position: bottom;
+}
+
+.container .iphone {
+    position: absolute;
+    top: 40%;
+    left: 12%;
+    z-index: 2;
+    width: 245px;
+}
+
+.container .iphone .imgBx {
+    position: absolute;
+    width: 160px;
+    height: 285px;
+    top: 44px;
+    left: 43px;
+    background: red url(assets/mobileWebsite.jpg);
+    background-position: top;
+    background-size: 100%;
+    transition: background-position 12.5s linear;
+}
+
+.container .iphone:hover .imgBx {
+    background-position: bottom;
+}
+
+/* @media (max-midth: 1100px) {
+    .container {
+        flex-direction: column;
+        background-color: red;
+    }
+
+    .container .mac {
+        position: relative;
+        left: auto;
+        margin-top: 40px;
+    }
+} */
+
+@media (max-width: 1100px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .container .mac,
+    .container .macbook,
+    .container .iphone {
+        position: relative;
+        left: auto;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container .mac,
+    .container .macbook,
+    .container .iphone {
+        width: 90%;
+    }
+
+    .container .mac img,
+    .container .macbook img,
+    .container .iphone img {
+        width: 100%;
+    }
+
+    .container .mac .imgBx {
+        width: calc(100% * 555 / 606);
+        height: calc(100% * 313 / 489);
+        top: calc(100% * 25 / 606);
+        left: calc(100% * 25 / 606);
+    }
+
+    .container .macbook .imgBx {
+        width: calc(100% * 465 / 609);
+        height: calc(100% * 290 / 362);
+        top: calc(100% * 25 / 609);
+        left: calc(100% * 72 / 609);
+    }
+
+    .container .iphone .imgBx {
+        width: calc(100% * 160 / 245);
+        height: calc(100% * 285 / 383);
+        top: calc(100% * 44 / 383);
+        left: calc(100% * 43 / 245);
+    }
+}

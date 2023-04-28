@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+}
+
+section div {
+    position: relative;
+    width: 50%;
+    background: #20506b;
+    overflow: hidden;
+}
+
+section div h2 {
+    position: absolute;
+    font-size: 200px;
+    line-height: 100vh;
+    white-space: nowrap;
+    user-select: none;
+}
+
+section div:nth-child(1) h2 {
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: #fff;
+    -webkit-text-fill-color: transparent;
+    left: 100%;
+    animation: animate 27s linear infinite;
+}
+
+section div:nth-child(2) h2 {
+    color: #fff;
+    left: 0;
+    animation: animate 27s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+
+}
+
+section div:nth-child(1) {
+    width: 50%;
+    background: url(Rick.png);
+    background-size: cover;
+}
